@@ -11,7 +11,7 @@ class FixMp3Name
     if File.exist? file
       begin
         Mp3Info.open(file, :encoding => 'utf-8') do |mp3|
-          mp3.tag.artist = mp3.tag.title = title
+          mp3.tag.title = title
         end  
       rescue
         puts file
